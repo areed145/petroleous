@@ -82,7 +82,7 @@ class field:
             mode='markers',
             name='prod')
             
-        plot([contour,obs,inj,prod])
+        plot([contour,obs,inj,prod],filename='plot_contour')
     
     def plot_grid(self,z,prop):
         
@@ -99,7 +99,7 @@ class field:
             )
         )
             
-        plot([grid])
+        plot([grid],filename='plot_grid')
     
     def plot_typelog(self):
         gr = go.Scatter(x=self.geology['typelog']['z'],
@@ -108,7 +108,7 @@ class field:
         res = go.Scatter(x=self.geology['typelog']['z'],
                             y=self.geology['typelog']['res'])
             
-        plot([gr, res])
+        plot([gr, res],filename='plot_typelog')
     
     def generate_typelog(self,vmin,vmax):
         typelog = []
